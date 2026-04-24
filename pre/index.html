@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ranný medový rituál: Čo by ste mali vedieť o pamäti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:#fafaf7;color:#333;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ===== TOP STRIP ===== */
+.top-strip{background:#2d5a3d;padding:6px 0;text-align:center}
+.top-strip p{font-size:10px;color:rgba(255,255,255,.7);letter-spacing:.5px;max-width:700px;margin:0 auto;padding:0 16px}
+
+/* ===== NAVBAR ===== */
+.navbar{background:#fff;padding:12px 0;border-bottom:2px solid #2d5a3d;box-shadow:0 1px 6px rgba(0,0,0,.04)}
+.navbar-inner{max-width:700px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
+.nav-logo{font-family:'Playfair Display',serif;font-size:18px;color:#2d5a3d;font-weight:700}
+.nav-logo span{color:#c49a3c}
+.nav-date{font-size:10px;color:#999}
+
+/* ===== ARTICLE ===== */
+.article{max-width:700px;margin:0 auto;padding:20px 20px 30px}
+
+/* ===== CATEGORY ===== */
+.cat{display:inline-block;background:#2d5a3d;color:#fff;font-size:9px;font-weight:600;padding:4px 14px;border-radius:20px;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:14px}
+
+/* ===== HEADLINE ===== */
+.headline{font-family:'Playfair Display',serif;font-size:28px;color:#1a1a1a;line-height:1.3;font-weight:700;margin-bottom:8px}
+.headline em{color:#2d5a3d;font-style:normal}
+
+/* ===== SUBHEAD ===== */
+.subhead{font-size:16px;color:#666;line-height:1.6;margin-bottom:14px;font-weight:300}
+
+/* ===== META ===== */
+.meta{display:flex;align-items:center;gap:14px;font-size:11px;color:#999;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid #eee;flex-wrap:wrap}
+.meta-dot{width:3px;height:3px;background:#ccc;border-radius:50%}
+
+/* ===== HERO ===== */
+.hero-wrap{margin-bottom:20px;border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.hero-wrap img{width:100%;cursor:pointer;transition:transform .3s}
+.hero-wrap img:hover{transform:scale(1.01)}
+.hero-cap{font-size:10px;color:#aaa;padding:6px 0;font-style:italic}
+
+/* ===== CTA — ENORME ===== */
+.cta-block{margin:24px 0;padding:24px 22px;background:#2d5a3d;border-radius:12px;text-align:center;box-shadow:0 8px 30px rgba(45,90,61,.25)}
+.cta-block h2{font-family:'Playfair Display',serif;font-size:21px;color:#fff;font-weight:700;margin-bottom:6px;line-height:1.3}
+.cta-block p{font-size:13px;color:rgba(255,255,255,.7);margin-bottom:16px;font-weight:300}
+.btn-huge{display:block;width:100%;background:#c49a3c;color:#fff;padding:22px 30px;font-size:21px;font-weight:700;border-radius:10px;text-align:center;transition:all .25s;letter-spacing:.3px;border:none}
+.btn-huge:hover{background:#b08830;transform:translateY(-2px);box-shadow:0 8px 30px rgba(196,154,60,.4)}
+.cta-block small{display:block;margin-top:10px;font-size:10px;color:rgba(255,255,255,.5)}
+
+/* ===== TEXT ===== */
+.art-text{font-size:17px;line-height:2;color:#444;margin-bottom:16px;font-weight:400}
+.art-text strong{color:#1a1a1a;font-weight:600}
+.art-text em{color:#2d5a3d;font-style:normal;font-weight:600}
+
+/* ===== QUESTION CARD ===== */
+.q-card{margin:24px 0;padding:22px;background:#fff;border-radius:12px;border:2px solid #2d5a3d;box-shadow:0 2px 12px rgba(0,0,0,.04)}
+.q-card h3{font-family:'Playfair Display',serif;font-size:20px;color:#1a1a1a;font-weight:700;line-height:1.4}
+.q-card h3 em{color:#2d5a3d;font-style:normal}
+
+/* ===== TIMELINE STEPS ===== */
+.timeline{margin:24px 0}
+.timeline-head{font-family:'Playfair Display',serif;font-size:19px;color:#1a1a1a;font-weight:700;margin-bottom:16px;text-align:center}
+.step{display:flex;gap:16px;margin-bottom:0;position:relative}
+.step-line{display:flex;flex-direction:column;align-items:center;flex-shrink:0}
+.step-dot{width:40px;height:40px;background:#2d5a3d;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;z-index:1}
+.step-connector{width:3px;flex:1;background:#d4e0d8;min-height:20px}
+.step-content{padding:6px 0 28px;flex:1}
+.step-content h4{font-size:16px;color:#1a1a1a;font-weight:600;margin-bottom:4px}
+.step-content p{font-size:14px;color:#666;line-height:1.7;font-weight:400}
+.step:last-child .step-connector{display:none}
+.step:last-child .step-content{padding-bottom:0}
+
+/* ===== TESTIMONIAL ===== */
+.testimonial{margin:24px 0;border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.06);background:#fff}
+.testimonial img{width:100%;max-height:340px;object-fit:cover;cursor:pointer}
+.t-body{padding:20px 22px}
+.t-quote{font-family:'Playfair Display',serif;font-size:17px;color:#444;font-style:italic;line-height:1.7;margin-bottom:10px}
+.t-name{font-size:12px;color:#2d5a3d;font-weight:700}
+
+/* ===== HIGHLIGHT ===== */
+.highlight{margin:24px 0;padding:20px 22px;background:#eef4f0;border-radius:10px;border-left:5px solid #2d5a3d}
+.highlight p{font-family:'Playfair Display',serif;font-size:17px;color:#2d5a3d;font-style:italic;line-height:1.6}
+
+/* ===== CTA BOTTOM ===== */
+.cta-bottom{margin:24px 0;padding:30px 22px;background:#1a1a1a;border-radius:12px;text-align:center;border:3px solid #c49a3c}
+.cta-bottom h3{font-family:'Playfair Display',serif;font-size:23px;color:#c49a3c;margin-bottom:6px;font-weight:700}
+.cta-bottom p{font-size:14px;color:#aaa;margin-bottom:18px;font-weight:300}
+.btn-huge-alt{display:block;width:100%;background:#c49a3c;color:#1a1a1a;padding:24px 30px;font-size:22px;font-weight:700;border-radius:10px;text-align:center;transition:all .25s}
+.btn-huge-alt:hover{background:#b08830;transform:translateY(-2px);box-shadow:0 8px 30px rgba(196,154,60,.4)}
+.cta-bottom small{display:block;margin-top:10px;font-size:10px;color:#666}
+
+/* ===== DISCLAIMER ===== */
+.disclaimer{margin:28px 0 0;padding:22px;background:#f5f3ee;border-radius:10px;border:1px solid #e0ddd5}
+.disclaimer h4{font-family:'Playfair Display',serif;font-size:13px;color:#666;margin-bottom:10px;font-weight:700}
+.disclaimer p{font-size:11px;color:#888;line-height:1.9;margin-bottom:8px}
+.disclaimer p:last-child{margin-bottom:0}
+.disclaimer strong{color:#666}
+
+/* ===== FOOTER ===== */
+footer{max-width:700px;margin:0 auto;padding:20px 20px 40px;border-top:1px solid #eee}
+.footer-company{margin-bottom:14px;padding:16px 18px;background:#f5f3ee;border-radius:8px}
+.footer-company h5{font-family:'Playfair Display',serif;font-size:13px;color:#1a1a1a;margin-bottom:6px}
+.footer-company p{font-size:10px;color:#888;line-height:1.9}
+.footer-links{text-align:center;font-size:10px;color:#aaa;margin-top:10px}
+.footer-links a{color:#2d5a3d;margin:0 8px}
+.footer-links a:hover{text-decoration:underline}
+.footer-copy{text-align:center;font-size:9px;color:#bbb;margin-top:8px}
+
+@media(max-width:640px){
+.headline{font-size:22px}
+.btn-huge{font-size:18px;padding:20px}
+.btn-huge-alt{font-size:19px;padding:22px}
+.art-text{font-size:16px}
+.cta-block h2{font-size:18px}
+.cta-bottom h3{font-size:20px}
+.step-dot{width:34px;height:34px;font-size:14px}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP STRIP -->
+<div class="top-strip">
+<p>Informačný portál o prírodných metódach pre duševnú pohodu</p>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="navbar-inner">
+<div class="nav-logo">Zdravie<span>Dnes</span></div>
+<div class="nav-date"><script>var d=new Date();var m=['januára','februára','marca','apríla','mája','júna','júla','augusta','septembra','októbra','novembra','decembra'];document.write(d.getDate()+'. '+m[d.getMonth()]+' '+d.getFullYear())</script></div>
+</div>
+</nav>
+
+<!-- ARTICLE -->
+<article class="article">
+
+<!-- CATEGORY -->
+<span class="cat">Prírodné metódy</span>
+
+<!-- HEADLINE -->
+<h1 class="headline">Prečo sa na Slovensku hovorí o tomto <em>rannom medovom rituáli?</em></h1>
+
+<!-- SUBHEAD -->
+<p class="subhead">Príbeh bratislavského páru, ktorý zmenil jednu rannú zvyklosť — a celé okolie si to všimlo.</p>
+
+<!-- META -->
+<div class="meta">
+<span><strong>Autorka:</strong> Mgr. Jana Kováčová</span>
+<span class="meta-dot"></span>
+<span><script>var d=new Date();var m=['januára','februára','marca','apríla','mája','júna','júla','augusta','septembra','októbra','novembra','decembra'];document.write(d.getDate()+'. '+m[d.getMonth()]+' '+d.getFullYear())</script></span>
+<span class="meta-dot"></span>
+<span>Čas čítania: 3 min</span>
+</div>
+
+<!-- HERO -->
+<div class="hero-wrap">
+<a href="https://lp.oficialproelite.shop/preclick"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663297503148/jCMGTU5NUP78zZrraNsLhW/mem_slovakia2-honey-bratislava-market-Lino9Vv7BNnRDCG2wLCGL3.webp" alt="Lipový med na bratislavskom trhu"></a>
+</div>
+<p class="hero-cap">Foto: Lipový med na tradičnom slovenskom farmárskom trhu</p>
+
+<!-- ========== CTA 1 — ENORME ========== -->
+<div class="cta-block">
+<h2>&#9654; Pozrite si video, ktoré ukazuje celý recept krok za krokom</h2>
+<p>Ktoré ingrediencie použiť · Ako ich správne zmiešať · Kedy to piť</p>
+<a href="https://lp.oficialproelite.shop/preclick" class="btn-huge">KLIKNITE SEM A POZRITE SI VIDEO &rarr;</a>
+<small>Bezplatný informačný obsah · Bez registrácie</small>
+</div>
+
+<!-- TEXT -->
+<p class="art-text">Poznáte ten pocit? Vojdete do kuchyne — a <strong>neviete, prečo ste tam prišli.</strong> Stretnete starého známeho — a <strong>nemôžete si spomenúť na jeho meno.</strong> Položíte okuliare — a <strong>hľadáte ich celé minúty.</strong></p>
+
+<p class="art-text">Väčšina ľudí povie: <em>„To je normálne, s tým sa nedá nič robiť."</em></p>
+
+<p class="art-text">Ale čo ak <strong>to nie je celý príbeh?</strong></p>
+
+<!-- QUESTION CARD -->
+<div class="q-card">
+<h3>Čo ak je kľúč k <em>duševnej sviežosti</em> ukrytý v našich ranných zvyklostiach?</h3>
+</div>
+
+<p class="art-text">Jeden pár z Bratislavy — on má 68, ona 65 rokov — začal každé ráno s jednoduchou <em>medovou zmesou</em>. Recept dostali od <strong>starého včelára z Podunajska</strong>, ktorý ho zdedil po svojej starej mame.</p>
+
+<p class="art-text">Nie je to žiadny drahý prípravok. Nie je to nič komplikované. Len <strong>jedna lyžica medu</strong> — ale <em>nie tak, ako by ste čakali.</em></p>
+
+<p class="art-text">Pretože samotný med je len sladidlo. Ale keď ho <strong>zmiešate s niekoľkými ďalšími ingredienciami</strong> — ktoré nájdete v každej slovenskej kuchyni — a vypijete to <em>ráno, nalačno</em>... to je niečo úplne iné.</p>
+
+<!-- QUESTION CARD 2 -->
+<div class="q-card">
+<h3>Ale prečo práve <em>med?</em> A prečo ho nestačí jednoducho <em>zjesť lyžicu?</em></h3>
+</div>
+
+<!-- TIMELINE STEPS -->
+<div class="timeline">
+<h3 class="timeline-head">Čo sa dozviete vo videu:</h3>
+
+<div class="step">
+<div class="step-line"><span class="step-dot">1</span><div class="step-connector"></div></div>
+<div class="step-content">
+<h4>Prírodná látka v mede</h4>
+<p>Ktorá <strong>prírodná zložka</strong> v mede upútala pozornosť výskumníkov — a prečo ju väčšina ľudí nepozná.</p>
+</div>
+</div>
+
+<div class="step">
+<div class="step-line"><span class="step-dot">2</span><div class="step-connector"></div></div>
+<div class="step-content">
+<h4>Štyri ďalšie ingrediencie</h4>
+<p>Ktoré <strong>štyri bežné ingrediencie</strong> z každej slovenskej kuchyne treba pridať — a prečo práve tieto.</p>
+</div>
+</div>
+
+<div class="step">
+<div class="step-line"><span class="step-dot">3</span><div class="step-connector"></div></div>
+<div class="step-content">
+<h4>Správne poradie miešania</h4>
+<p>Prečo <strong>nie je jedno</strong>, v akom poradí ingrediencie zmiešate — a čo sa stane, ak to urobíte zle.</p>
+</div>
+</div>
+
+<div class="step">
+<div class="step-line"><span class="step-dot">4</span><div class="step-connector"></div></div>
+<div class="step-content">
+<h4>Ideálny čas na konzumáciu</h4>
+<p>Prečo je <strong>ráno nalačno</strong> jediný správny moment — tak, ako to robia slovenskí včelári už generácie.</p>
+</div>
+</div>
+</div>
+
+<!-- TESTIMONIAL -->
+<div class="testimonial">
+<a href="https://lp.oficialproelite.shop/preclick"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663297503148/jCMGTU5NUP78zZrraNsLhW/mem_slovakia2-elderly-couple-bratislava-Fzab2YAGmdTWgReCErsFUY.webp" alt="Slovenský pár v Bratislave"></a>
+<div class="t-body">
+<p class="t-quote">„Tri mesiace to robíme každé ráno. Predtým som stále hľadal kľúče, zabudol som mená susedov. Teraz si manželka hovorí: 'Ty si ako predtým.' A ja sa len usmievam — lebo viem, čo sa zmenilo."</p>
+<p class="t-name">— Ján a Mária Novákovi, 68 a 65 rokov, Bratislava</p>
+</div>
+</div>
+
+<!-- HIGHLIGHT -->
+<div class="highlight">
+<p>„Nie je to med sám o sebe — ale to, čo sa stane, keď ho skombinujete so správnymi ingredienciami, v správnom čase."</p>
+</div>
+
+<!-- ========== CTA 2 — ENORME ========== -->
+<div class="cta-bottom">
+<h3>Pozrite si celý recept — krok za krokom</h3>
+<p>Presné ingrediencie · Správne pomery · Ideálny čas · Všetko v jednom krátkom videu</p>
+<a href="https://lp.oficialproelite.shop/preclick" class="btn-huge-alt">POZRIEŤ VIDEO TERAZ &rarr;</a>
+<small>Bezplatný informačný obsah · Bez registrácie</small>
+</div>
+
+<!-- ===== DISCLAIMER COMPLETO ===== -->
+<div class="disclaimer">
+<h4>Právne vyhlásenie a vylúčenie zodpovednosti</h4>
+<p>Táto stránka má výlučne <strong>informačný charakter</strong> a nepredstavuje lekárske, zdravotné ani odborné poradenstvo. Tu prezentované informácie nenahradzujú odbornú lekársku konzultáciu, diagnostiku ani liečbu.</p>
+<p>Výživové doplnky nenahradzujú pestrú a vyváženú stravu a zdravý životný štýl. Individuálne výsledky sa môžu líšiť. Pred akoukoľvek zmenou stravy alebo životného štýlu sa <strong>poraďte so svojím lekárom.</strong></p>
+<p>Názory a svedectvá uvedené v článku <strong>odrážajú osobné skúsenosti</strong> a nepredstavujú vedecký dôkaz. Táto stránka netvrdí, že akýkoľvek produkt alebo metóda je vhodná na prevenciu, liečbu alebo vyliečenie chorôb.</p>
+<p>Externé odkazy na tejto stránke môžu viesť na webové stránky tretích strán, za obsah a zásady ochrany osobných údajov ktorých nenesieme zodpovednosť.</p>
+<p><strong>Prevádzkovateľ:</strong> Prírodná Pohoda Média s.r.o. &middot; <strong>IČO (CNPJ):</strong> 65.065.025/0001-19 &middot; <strong>Sídlo:</strong> Bratislava, Slovenská republika &middot; <strong>E-mail:</strong> info@prirodnapohoda.sk &middot; <strong>Činnosť:</strong> Online informačné služby a publikovanie obsahu</p>
+</div>
+
+</article>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+<div class="footer-company">
+<h5>Prírodná Pohoda Média s.r.o.</h5>
+<p>
+<strong>IČO (CNPJ):</strong> 65.065.025/0001-19<br>
+<strong>Sídlo:</strong> Bratislava, Slovenská republika<br>
+<strong>E-mail:</strong> info@prirodnapohoda.sk<br>
+<strong>Činnosť:</strong> Online informačné služby a publikovanie obsahu<br>
+<strong>Zodpovedná osoba:</strong> Mgr. Jana Kováčová
+</p>
+</div>
+<div class="footer-links">
+<a href="privacy.html">Zásady ochrany osobných údajov</a>
+<a href="terms.html">Podmienky používania</a>
+</div>
+<p class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Prírodná Pohoda Média s.r.o. Všetky práva vyhradené.</p>
+</footer>
+
+<script>
+(function(){var q=window.location.search;if(!q)return;document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href');if(!h||h.startsWith('#')||h.startsWith('mailto:'))return;a.setAttribute('href',h.includes('?')?h+'&'+q.substring(1):h+q)})})();
+</script>
+<script type="text/javascript" src="https://lp.oficialproelite.shop/pretrack.js?rtkcmpid=69eacdd965a115cddba4999e"></script>
+</body>
+</html>
